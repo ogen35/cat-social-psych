@@ -1,0 +1,21 @@
+{
+ "type": "chat",
+ "w": 1080,
+ "h": 760,
+ "marks": [
+  {
+   "i": 0,
+   "text": "尴尬",
+   "rect": [
+    0.7278,
+    0.6661,
+    0.0778,
+    0.0803
+   ]
+  }
+ ],
+ "sources": [
+  "/root/.claude/skills/cat-social-psych/assets/角色库/大宝/02_脸部特写_得意.jpg",
+  "/root/.claude/skills/cat-social-psych/assets/角色库/大比/02_脸部特写_得意.jpg"
+ ]
+}

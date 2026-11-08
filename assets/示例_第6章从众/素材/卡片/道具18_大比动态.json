@@ -1,0 +1,21 @@
+{
+ "type": "moments",
+ "w": 1080,
+ "h": 1066,
+ "marks": [
+  {
+   "i": 0,
+   "text": "真话",
+   "rect": [
+    0.7296,
+    0.1229,
+    0.1,
+    0.0741
+   ]
+  }
+ ],
+ "sources": [
+  "/root/.claude/skills/cat-social-psych/assets/角色库/大比/02_脸部特写_得意.jpg",
+  "/root/.claude/skills/cat-social-psych/assets/角色库/大比/22_生活场景_在键盘上.jpg"
+ ]
+}

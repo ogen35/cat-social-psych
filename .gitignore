@@ -1,0 +1,16 @@
+# 书是受版权保护的作品：只在本机用，不进仓库（章节页码表 book.json 除外）
+书籍/*
+!书籍/book.json
+
+# 中间文件
+**/build/
+__pycache__/
+*.pyc
+.seed_cache/
+
+# 旧 Vox 样片的成片 125 MB，超过 GitHub 单文件上限
+assets/示例_第6章从众/output/成片.mp4
+
+# 密钥一律放 ~/.config/cat-social-psych/keys.env，不放进 skill
+*.env
+.DS_Store

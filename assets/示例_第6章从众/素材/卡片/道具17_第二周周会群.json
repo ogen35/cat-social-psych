@@ -1,0 +1,22 @@
+{
+ "type": "chat",
+ "w": 1080,
+ "h": 909,
+ "marks": [
+  {
+   "i": 0,
+   "text": "我不。我选B。",
+   "rect": [
+    0.1556,
+    0.4781,
+    0.2602,
+    0.0671
+   ]
+  }
+ ],
+ "sources": [
+  "/root/.claude/skills/cat-social-psych/assets/角色库/大宝/02_脸部特写_得意.jpg",
+  "/root/.claude/skills/cat-social-psych/assets/角色库/大比/02_脸部特写_得意.jpg",
+  "/root/.claude/skills/cat-social-psych/assets/角色库/胜利/02_脸部特写_得意.jpg"
+ ]
+}

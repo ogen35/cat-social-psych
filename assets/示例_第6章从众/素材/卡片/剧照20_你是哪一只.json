@@ -1,0 +1,10 @@
+{
+ "type": "scene",
+ "w": 1200,
+ "h": 1000,
+ "marks": [],
+ "sources": [
+  "/root/.claude/skills/cat-social-psych/assets/角色库/大宝/08_全身_走_抠图.png",
+  "/root/.claude/skills/cat-social-psych/assets/角色库/大比/26_生活场景_坐在门口_抠图.png"
+ ]
+}

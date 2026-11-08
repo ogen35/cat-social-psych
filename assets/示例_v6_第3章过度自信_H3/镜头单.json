@@ -1,0 +1,362 @@
+{
+ "episode": "27 过度自信（海螺 H3 多参）",
+ "library": {},
+ "shots": [
+  {
+   "id": "A",
+   "line": "hook",
+   "angle": "远景建立→推近",
+   "scene": "客厅",
+   "cast": [
+    "大宝",
+    "胜利",
+    "大比"
+   ],
+   "duration": 6,
+   "camera": "A wide eye-level establishing shot of {scene}; the camera slowly and clearly pushes in toward {大宝}.",
+   "blocking": "{大宝} sits upright in the middle of the pink sofa, chin raised, eyes closed. {胜利} stands on the floor right of the coffee table, grinning. {大比} sits on the floor left of the coffee table, level with the table, looking up at {大宝}.",
+   "lines": [
+    {
+     "speaker": "大宝",
+     "say": "胜利会怎么选？我闭着眼都知道。",
+     "voice": "calm, deep, self-assured",
+     "after": "It opens one eye with a small smug smile."
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 3> is Shengli from {{Node i-f2SGkGT58O}}: chubby white cat with dark-brown tabby cap and back patch, smug orange eyes, huge upright striped bushy tail, small red crown.\n<Subject 4> is Dabi from {{Node i-YhN0mW6J3P}}: fluffy cream ragdoll cat, round dark-brown face mask around big blue eyes, dark ears, bushy dark-brown tail, red heart tag.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>, <Subject 3>, <Subject 4>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3>, <Subject 4> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A wide eye-level establishing shot of <Subject 1>; the camera slowly and clearly pushes in toward <Subject 2>. <Subject 2> sits upright in the middle of the pink sofa, chin raised, eyes closed. <Subject 3> stands on the floor right of the coffee table, grinning. <Subject 4> sits on the floor left of the coffee table, level with the table, looking up at <Subject 2>. <Subject 2> (S1) says (calm, deep, self-assured), <d>[Chinese] 胜利会怎么选？我闭着眼都知道。</d> It opens one eye with a small smug smile.\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB",
+    "i-f2SGkGT58O",
+    "i-YhN0mW6J3P"
+   ]
+  },
+  {
+   "id": "B",
+   "line": "quiz+rule",
+   "angle": "过肩",
+   "scene": "客厅",
+   "cast": [
+    "大宝",
+    "胜利"
+   ],
+   "props": [
+    "问答卡"
+   ],
+   "duration": 8,
+   "safe": false,
+   "camera": "An over-the-shoulder medium shot from behind {大宝}: the back of its head and tall ear tufts sit in the left middle of the frame, and the camera looks across the coffee table at {胜利}.",
+   "blocking": "{胜利} stands facing the camera, holding {问答卡} spread out toward {大宝} with both front paws, grinning mischievously.",
+   "lines": [
+    {
+     "speaker": "胜利",
+     "say": "那就猜20道：我选哪个。每道再说说，你有几成把握。",
+     "voice": "playful, teasing",
+     "after": "It waggles the cards once."
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 3> is Shengli from {{Node i-f2SGkGT58O}}: chubby white cat with dark-brown tabby cap and back patch, smug orange eyes, huge upright striped bushy tail, small red crown.\n<Subject 4> is the fan of plain white quiz cards with pink borders in {{Node i-SDcZyU2gvr}}.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>, <Subject 3>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3>, <Subject 4> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame.\n[Shot 1] An over-the-shoulder medium shot from behind <Subject 2>: the back of its head and tall ear tufts sit in the left middle of the frame, and the camera looks across the coffee table at <Subject 3>. <Subject 3> stands facing the camera, holding <Subject 4> spread out toward <Subject 2> with both front paws, grinning mischievously. <Subject 3> (S1) says (playful, teasing), <d>[Chinese] 那就猜20道：我选哪个。每道再说说，你有几成把握。</d> It waggles the cards once.\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB",
+    "i-f2SGkGT58O",
+    "i-SDcZyU2gvr"
+   ]
+  },
+  {
+   "id": "C",
+   "line": "conf",
+   "angle": "仰拍特写",
+   "scene": "客厅",
+   "cast": [
+    "大宝"
+   ],
+   "duration": 5,
+   "camera": "A low-angle close-up of {大宝} on the sofa, the camera below its chin looking up, framing its head and chest; a slight slow push-in.",
+   "blocking": "{大宝} looks down at the camera with half-closed eyes and a confident smirk.",
+   "lines": [
+    {
+     "speaker": "大宝",
+     "say": "八成。稳了。",
+     "voice": "calm, very sure",
+     "after": "It nods once."
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>.\n\nretention_analysis:\n<Subject 1>, <Subject 2> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A low-angle close-up of <Subject 2> on the sofa, the camera below its chin looking up, framing its head and chest; a slight slow push-in. <Subject 2> looks down at the camera with half-closed eyes and a confident smirk. <Subject 2> (S1) says (calm, very sure), <d>[Chinese] 八成。稳了。</d> It nods once.\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB"
+   ]
+  },
+  {
+   "id": "D",
+   "line": "betD+betS",
+   "angle": "地面双人中景",
+   "scene": "客厅",
+   "cast": [
+    "大比",
+    "胜利"
+   ],
+   "props": [
+    "问答卡"
+   ],
+   "duration": 7,
+   "camera": "A medium two-shot from a low camera height beside the coffee table, static camera; the two cats are large and fill the middle of the frame, their heads at about one third from the top.",
+   "blocking": "{大比} sits on the floor on the left and {胜利} on the right, facing each other in three-quarter view, {问答卡} lying on the floor between them.",
+   "lines": [
+    {
+     "speaker": "大比",
+     "say": "大宝那么聪明，肯定能对八成！",
+     "voice": "admiring, sweet"
+    },
+    {
+     "speaker": "胜利",
+     "say": "我猜，没那么多。",
+     "voice": "smug, holding back a laugh",
+     "after": "{胜利} covers its mouth with one paw to hide a grin."
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabi from {{Node i-YhN0mW6J3P}}: fluffy cream ragdoll cat, round dark-brown face mask around big blue eyes, dark ears, bushy dark-brown tail, red heart tag.\n<Subject 3> is Shengli from {{Node i-f2SGkGT58O}}: chubby white cat with dark-brown tabby cap and back patch, smug orange eyes, huge upright striped bushy tail, small red crown.\n<Subject 4> is the fan of plain white quiz cards with pink borders in {{Node i-SDcZyU2gvr}}.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>, <Subject 3>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3>, <Subject 4> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A medium two-shot from a low camera height beside the coffee table, static camera; the two cats are large and fill the middle of the frame, their heads at about one third from the top. <Subject 2> sits on the floor on the left and <Subject 3> on the right, facing each other in three-quarter view, <Subject 4> lying on the floor between them. <Subject 2> (S1) says (admiring, sweet), <d>[Chinese] 大宝那么聪明，肯定能对八成！</d> <Subject 3> (S2) says (smug, holding back a laugh), <d>[Chinese] 我猜，没那么多。</d> <Subject 3> covers its mouth with one paw to hide a grin.\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-YhN0mW6J3P",
+    "i-f2SGkGT58O",
+    "i-SDcZyU2gvr"
+   ]
+  },
+  {
+   "id": "E",
+   "line": "play",
+   "angle": "俯拍",
+   "scene": "客厅",
+   "cast": [
+    "大宝",
+    "胜利"
+   ],
+   "props": [
+    "问答卡"
+   ],
+   "duration": 5,
+   "safe": false,
+   "camera": "A top-down overhead shot looking straight down at the round wooden coffee table, static camera.",
+   "blocking": "Twenty cards like {问答卡} lie face-down in neat rows on the table. One grey striped paw of {大宝} reaches in from the top edge and one white paw of {胜利} from the bottom edge, and they flip the cards over one after another; some faces show a small green tick, some a small red cross.",
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 3> is Shengli from {{Node i-f2SGkGT58O}}: chubby white cat with dark-brown tabby cap and back patch, smug orange eyes, huge upright striped bushy tail, small red crown.\n<Subject 4> is the fan of plain white quiz cards with pink borders in {{Node i-SDcZyU2gvr}}.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>, <Subject 3>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3>, <Subject 4> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame.\n[Shot 1] A top-down overhead shot looking straight down at the round wooden coffee table, static camera. Twenty cards like <Subject 4> lie face-down in neat rows on the table. One grey striped paw of <Subject 2> reaches in from the top edge and one white paw of <Subject 3> from the bottom edge, and they flip the cards over one after another; some faces show a small green tick, some a small red cross.\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB",
+    "i-f2SGkGT58O",
+    "i-SDcZyU2gvr"
+   ]
+  },
+  {
+   "id": "F",
+   "line": "result",
+   "angle": "特写推近",
+   "scene": "客厅",
+   "cast": [
+    "大宝"
+   ],
+   "props": [
+    "问答卡"
+   ],
+   "duration": 5,
+   "camera": "A close-up of {大宝}'s face and chest filling the upper two thirds of the frame; the camera pushes in slowly and dramatically.",
+   "blocking": "{大宝} holds one card like {问答卡} in both front paws and stares at it; its tall ear tufts slowly droop and its eyes go wide.",
+   "lines": [
+    {
+     "speaker": "大宝",
+     "say": "才对了14道？",
+     "voice": "stunned, quiet, disbelieving"
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 3> is the fan of plain white quiz cards with pink borders in {{Node i-SDcZyU2gvr}}.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A close-up of <Subject 2>'s face and chest filling the upper two thirds of the frame; the camera pushes in slowly and dramatically. <Subject 2> holds one card like <Subject 3> in both front paws and stares at it; its tall ear tufts slowly droop and its eyes go wide. <Subject 2> (S1) says (stunned, quiet, disbelieving), <d>[Chinese] 才对了14道？</d>\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB",
+    "i-SDcZyU2gvr"
+   ]
+  },
+  {
+   "id": "G",
+   "line": "laugh",
+   "angle": "倾斜广角",
+   "scene": "客厅",
+   "cast": [
+    "胜利",
+    "大比",
+    "大宝"
+   ],
+   "duration": 5,
+   "camera": "A slightly tilted medium-wide shot of {scene} with a gentle handheld shake; the cats are large in the middle third of the frame.",
+   "blocking": "{胜利} lies on its back on the floor in front of the coffee table, kicking its short legs and laughing; {大比} sits beside it covering its mouth with one paw; {大宝} slumps on the sofa behind them.",
+   "lines": [
+    {
+     "speaker": "胜利",
+     "say": "把握八成，实际七成！",
+     "voice": "cackling, gleeful"
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Shengli from {{Node i-f2SGkGT58O}}: chubby white cat with dark-brown tabby cap and back patch, smug orange eyes, huge upright striped bushy tail, small red crown.\n<Subject 3> is Dabi from {{Node i-YhN0mW6J3P}}: fluffy cream ragdoll cat, round dark-brown face mask around big blue eyes, dark ears, bushy dark-brown tail, red heart tag.\n<Subject 4> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>, <Subject 3>, <Subject 4>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3>, <Subject 4> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A slightly tilted medium-wide shot of <Subject 1> with a gentle handheld shake; the cats are large in the middle third of the frame. <Subject 2> lies on its back on the floor in front of the coffee table, kicking its short legs and laughing; <Subject 3> sits beside it covering its mouth with one paw; <Subject 4> slumps on the sofa behind them. <Subject 2> (S1) says (cackling, gleeful), <d>[Chinese] 把握八成，实际七成！</d>\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-f2SGkGT58O",
+    "i-YhN0mW6J3P",
+    "i-xZdZGWNKSB"
+   ]
+  },
+  {
+   "id": "H",
+   "line": "book",
+   "angle": "拉远",
+   "scene": "客厅",
+   "cast": [
+    "大宝"
+   ],
+   "props": [
+    "问答卡"
+   ],
+   "duration": 7,
+   "camera": "A medium shot of {大宝} sitting alone on the pink sofa at night, filling the middle of the frame; the camera slowly pulls back a little.",
+   "blocking": "{大宝} sits still, looking down at a few cards like {问答卡} in its lap, ears drooping slightly. The upper third of the frame shows the violet-blue wall with the framed abstract paintings.",
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 3> is the fan of plain white quiz cards with pink borders in {{Node i-SDcZyU2gvr}}.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A medium shot of <Subject 2> sitting alone on the pink sofa at night, filling the middle of the frame; the camera slowly pulls back a little. <Subject 2> sits still, looking down at a few cards like <Subject 3> in its lap, ears drooping slightly. The upper third of the frame shows the violet-blue wall with the framed abstract paintings.\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB",
+    "i-SDcZyU2gvr"
+   ]
+  },
+  {
+   "id": "I",
+   "line": "why+term",
+   "angle": "侧面横移",
+   "scene": "客厅",
+   "cast": [
+    "大宝"
+   ],
+   "props": [
+    "问答卡"
+   ],
+   "duration": 7,
+   "camera": "A side-profile medium shot of {大宝} on the sofa, large in the middle of the frame; the camera trucks slowly to the right.",
+   "blocking": "{大宝} turns a card like {问答卡} over in its paws and looks away, embarrassed, ears lowered.",
+   "lines": [
+    {
+     "speaker": "大宝",
+     "say": "猜错的那几道，我都记成了差不多对。",
+     "voice": "sheepish, low"
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 3> is the fan of plain white quiz cards with pink borders in {{Node i-SDcZyU2gvr}}.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A side-profile medium shot of <Subject 2> on the sofa, large in the middle of the frame; the camera trucks slowly to the right. <Subject 2> turns a card like <Subject 3> over in its paws and looks away, embarrassed, ears lowered. <Subject 2> (S1) says (sheepish, low), <d>[Chinese] 猜错的那几道，我都记成了差不多对。</d>\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB",
+    "i-SDcZyU2gvr"
+   ]
+  },
+  {
+   "id": "J",
+   "line": "point",
+   "angle": "正面直视",
+   "scene": "客厅",
+   "cast": [
+    "大宝"
+   ],
+   "duration": 5,
+   "camera": "A frontal medium close-up of {大宝}, head and chest filling the upper two thirds of the frame, centered, static camera.",
+   "blocking": "{大宝} looks straight into the camera, calm and serious.",
+   "lines": [
+    {
+     "speaker": "大宝",
+     "say": "自信，不等于能力。",
+     "voice": "slow, firm"
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>.\n\nretention_analysis:\n<Subject 1>, <Subject 2> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A frontal medium close-up of <Subject 2>, head and chest filling the upper two thirds of the frame, centered, static camera. <Subject 2> looks straight into the camera, calm and serious. <Subject 2> (S1) says (slow, firm), <d>[Chinese] 自信，不等于能力。</d>\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB"
+   ]
+  },
+  {
+   "id": "K",
+   "line": "ask",
+   "angle": "反打过肩",
+   "scene": "客厅",
+   "cast": [
+    "大宝",
+    "大比"
+   ],
+   "duration": 5,
+   "safe": false,
+   "camera": "An over-the-shoulder shot from behind {大宝}'s shoulder toward {大比}, who sits on the sofa next to it; {大比} is large in the middle of the frame.",
+   "blocking": "{大比} leans toward {大宝} with big curious eyes, both front paws together on the cushion.",
+   "lines": [
+    {
+     "speaker": "大比",
+     "say": "那怎么才能不那么自信？",
+     "voice": "earnest, curious"
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 3> is Dabi from {{Node i-YhN0mW6J3P}}: fluffy cream ragdoll cat, round dark-brown face mask around big blue eyes, dark ears, bushy dark-brown tail, red heart tag.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>, <Subject 3>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame.\n[Shot 1] An over-the-shoulder shot from behind <Subject 2>'s shoulder toward <Subject 3>, who sits on the sofa next to it; <Subject 3> is large in the middle of the frame. <Subject 3> leans toward <Subject 2> with big curious eyes, both front paws together on the cushion. <Subject 3> (S1) says (earnest, curious), <d>[Chinese] 那怎么才能不那么自信？</d>\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB",
+    "i-YhN0mW6J3P"
+   ]
+  },
+  {
+   "id": "L",
+   "line": "tip1+tip2",
+   "angle": "双人中景",
+   "scene": "客厅",
+   "cast": [
+    "大宝",
+    "大比"
+   ],
+   "duration": 8,
+   "camera": "A medium two-shot of {大宝} and {大比} sitting side by side on the pink sofa, both large in the middle of the frame, static camera, a slow push-in at the end.",
+   "blocking": "{大宝} touches its chin with its right front paw while its left front paw rests on the cushion; {大比} listens and nods.",
+   "lines": [
+    {
+     "speaker": "大宝",
+     "say": "下判断前，先问自己：我可能错在哪？再找个能马上告诉你对错的人。",
+     "voice": "calm, thoughtful"
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 3> is Dabi from {{Node i-YhN0mW6J3P}}: fluffy cream ragdoll cat, round dark-brown face mask around big blue eyes, dark ears, bushy dark-brown tail, red heart tag.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>, <Subject 3>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A medium two-shot of <Subject 2> and <Subject 3> sitting side by side on the pink sofa, both large in the middle of the frame, static camera, a slow push-in at the end. <Subject 2> touches its chin with its right front paw while its left front paw rests on the cushion; <Subject 3> listens and nods. <Subject 2> (S1) says (calm, thoughtful), <d>[Chinese] 下判断前，先问自己：我可能错在哪？再找个能马上告诉你对错的人。</d>\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-xZdZGWNKSB",
+    "i-YhN0mW6J3P"
+   ]
+  },
+  {
+   "id": "M",
+   "line": "punch",
+   "angle": "仰拍",
+   "scene": "客厅",
+   "cast": [
+    "胜利",
+    "大宝",
+    "大比"
+   ],
+   "duration": 6,
+   "camera": "A low-angle shot from the floor looking up at {胜利}, which is large in the middle of the frame; the camera slowly tilts up.",
+   "blocking": "{胜利} stands proudly on the coffee table with one front paw on its puffed chest, its crown gleaming; {大宝} and {大比} sit on the sofa behind it with flat, unimpressed faces.",
+   "lines": [
+    {
+     "speaker": "胜利",
+     "say": "那我问问自己……嗯，我不可能错。",
+     "voice": "pompous, self-satisfied"
+    }
+   ],
+   "h3_prompt": "subject_definitions:\n<Subject 1> is the living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor in {{Node i-QeGsS4jYUq}}.\n<Subject 2> is Shengli from {{Node i-f2SGkGT58O}}: chubby white cat with dark-brown tabby cap and back patch, smug orange eyes, huge upright striped bushy tail, small red crown.\n<Subject 3> is Dabao from {{Node i-xZdZGWNKSB}}: biggest cat, grey-brown striped Maine Coon, black ear tufts, cream chest ruff, yellow-green grumpy eyes.\n<Subject 4> is Dabi from {{Node i-YhN0mW6J3P}}: fluffy cream ragdoll cat, round dark-brown face mask around big blue eyes, dark ears, bushy dark-brown tail, red heart tag.\n\nsummary:\n[reference generation] One shot in <Subject 1> with <Subject 2>, <Subject 3>, <Subject 4>.\n\nretention_analysis:\n<Subject 1>, <Subject 2>, <Subject 3>, <Subject 4> ([Shot 1]): fully_preserved - designs, colors, painting style.\n\ndetailed_description:\nNaive contemporary art illustration matching the references: hand-painted gouache brushstrokes with colored-pencil texture, bold saturated color blocks, wobbly black outlines, deadpan humor. Each cat has four legs with round paws and one tail. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.\n[Shot 1] A low-angle shot from the floor looking up at <Subject 2>, which is large in the middle of the frame; the camera slowly tilts up. <Subject 2> stands proudly on the coffee table with one front paw on its puffed chest, its crown gleaming; <Subject 3> and <Subject 4> sit on the sofa behind it with flat, unimpressed faces. <Subject 2> (S1) says (pompous, self-satisfied), <d>[Chinese] 那我问问自己……嗯，我不可能错。</d>\n\noverall_soundscape:\nQuiet indoor room tone.\n\nnon_diegetic_music:\nN/A",
+   "refs": [
+    "i-QeGsS4jYUq",
+    "i-f2SGkGT58O",
+    "i-xZdZGWNKSB",
+    "i-YhN0mW6J3P"
+   ]
+  }
+ ]
+}

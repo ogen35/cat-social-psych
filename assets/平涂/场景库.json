@@ -1,0 +1,30 @@
+{
+ "客厅": {
+  "kind": "scene",
+  "version": "v3",
+  "node": "i-QeGsS4jYUq",
+  "file": "场景/客厅_v3.png",
+  "desc": "living room painted in naive gouache: violet-blue wall with framed abstract paintings, a hanging yellow lamp, a potted palm, a hot-pink sofa, a round wooden coffee table, a mustard-yellow round rug, a teal wooden floor"
+ },
+ "问答卡": {
+  "kind": "prop",
+  "version": "v3",
+  "node": "i-SDcZyU2gvr",
+  "file": "道具/问答卡_v3.png",
+  "desc": "fan of plain white quiz cards with pink borders"
+ },
+ "客厅_v2": {
+  "kind": "scene",
+  "node": "i-xrQboFbt7H",
+  "file": "场景/客厅_v2.png",
+  "desc": "cozy living room: cream wall, a night window with a crescent moon, a long hot-pink sofa, a round low wooden coffee table, a green potted plant on the left, a yellow floor lamp on the right, light beige wooden floor",
+  "version": "v2（停用）"
+ },
+ "问答卡_v2": {
+  "kind": "prop",
+  "node": "i-mo4cmbLbNd",
+  "file": "道具/问答卡_v2.png",
+  "desc": "fan of plain white quiz cards with thin hot-pink borders",
+  "version": "v2（停用）"
+ }
+}

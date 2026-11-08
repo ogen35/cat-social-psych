@@ -1,0 +1,542 @@
+{
+ "奖杯": {
+  "w": 56,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "银牌": {
+  "w": 40,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "铜牌": {
+  "w": 43,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "钱袋": {
+  "w": 49,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "闹钟": {
+  "w": 50,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "手机": {
+  "w": 38,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "书堆": {
+  "w": 58,
+  "h": 44,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "飞机": {
+  "w": 58,
+  "h": 42,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "汽车": {
+  "w": 58,
+  "h": 35,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · t1"
+ },
+ "公交车": {
+  "w": 58,
+  "h": 37,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "火车": {
+  "w": 58,
+  "h": 31,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "自行车": {
+  "w": 58,
+  "h": 40,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "救护车": {
+  "w": 58,
+  "h": 39,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "警车": {
+  "w": 58,
+  "h": 33,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "红绿灯": {
+  "w": 21,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "路牌": {
+  "w": 47,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "加油机": {
+  "w": 50,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "出租车": {
+  "w": 58,
+  "h": 35,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s02"
+ },
+ "医院": {
+  "w": 58,
+  "h": 50,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "胶囊": {
+  "w": 58,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "体温计": {
+  "w": 55,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "急救箱": {
+  "w": 58,
+  "h": 54,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "病床": {
+  "w": 58,
+  "h": 40,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "墓碑": {
+  "w": 58,
+  "h": 54,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "心电监护": {
+  "w": 58,
+  "h": 52,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "绷带": {
+  "w": 58,
+  "h": 50,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "轮椅": {
+  "w": 58,
+  "h": 55,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s03"
+ },
+ "金币堆": {
+  "w": 58,
+  "h": 55,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "钞票": {
+  "w": 58,
+  "h": 39,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "银行卡": {
+  "w": 58,
+  "h": 38,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "购物车": {
+  "w": 58,
+  "h": 51,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "购物袋": {
+  "w": 50,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "收银机": {
+  "w": 57,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "价格标签": {
+  "w": 50,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "存钱罐": {
+  "w": 58,
+  "h": 56,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "彩票": {
+  "w": 58,
+  "h": 45,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s04"
+ },
+ "满分试卷": {
+  "w": 48,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "不及格试卷": {
+  "w": 48,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "铅笔": {
+  "w": 55,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "书包": {
+  "w": 55,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "黑板": {
+  "w": 58,
+  "h": 49,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "学士帽": {
+  "w": 58,
+  "h": 49,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "地球仪": {
+  "w": 47,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "计算器": {
+  "w": 44,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "奖状": {
+  "w": 58,
+  "h": 51,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s05"
+ },
+ "电脑": {
+  "w": 52,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "文件夹": {
+  "w": 57,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "咖啡杯": {
+  "w": 49,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "公文包": {
+  "w": 58,
+  "h": 56,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "办公椅": {
+  "w": 47,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "文件堆": {
+  "w": 49,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "便利贴": {
+  "w": 58,
+  "h": 50,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "笔记本电脑": {
+  "w": 58,
+  "h": 50,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "台灯": {
+  "w": 52,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s06"
+ },
+ "沙发": {
+  "w": 58,
+  "h": 40,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "床": {
+  "w": 58,
+  "h": 57,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "电视": {
+  "w": 53,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "冰箱": {
+  "w": 38,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "花瓶": {
+  "w": 40,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "镜子": {
+  "w": 40,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "门": {
+  "w": 39,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "窗户": {
+  "w": 58,
+  "h": 57,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "盆栽": {
+  "w": 50,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s07"
+ },
+ "鱼": {
+  "w": 58,
+  "h": 43,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "鱼骨头": {
+  "w": 58,
+  "h": 31,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "猫罐头": {
+  "w": 58,
+  "h": 53,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "蛋糕": {
+  "w": 52,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "汉堡": {
+  "w": 58,
+  "h": 56,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "奶茶": {
+  "w": 38,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "西瓜": {
+  "w": 58,
+  "h": 47,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "面条": {
+  "w": 58,
+  "h": 56,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "饭团": {
+  "w": 58,
+  "h": 54,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s08"
+ },
+ "纸箱": {
+  "w": 58,
+  "h": 48,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "毛线球": {
+  "w": 58,
+  "h": 48,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "逗猫棒": {
+  "w": 58,
+  "h": 54,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "猫砂盆": {
+  "w": 58,
+  "h": 41,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "猫窝": {
+  "w": 58,
+  "h": 44,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "猫粮碗": {
+  "w": 58,
+  "h": 41,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "猫爬架": {
+  "w": 45,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "玩具老鼠": {
+  "w": 58,
+  "h": 38,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "猫爪印": {
+  "w": 58,
+  "h": 54,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s09"
+ },
+ "领奖台": {
+  "w": 58,
+  "h": 35,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "终点线": {
+  "w": 58,
+  "h": 40,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "足球": {
+  "w": 58,
+  "h": 57,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "篮球": {
+  "w": 58,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "跑鞋": {
+  "w": 58,
+  "h": 39,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "秒表": {
+  "w": 48,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "赛车旗": {
+  "w": 52,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "哨子": {
+  "w": 58,
+  "h": 35,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "拳击手套": {
+  "w": 47,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s10"
+ },
+ "大脑": {
+  "w": 58,
+  "h": 54,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "放大镜": {
+  "w": 56,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "问卷夹板": {
+  "w": 42,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "天平": {
+  "w": 58,
+  "h": 54,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "骰子": {
+  "w": 55,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "红按钮": {
+  "w": 58,
+  "h": 54,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "灯泡": {
+  "w": 40,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "心碎": {
+  "w": 58,
+  "h": 47,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "炸弹": {
+  "w": 50,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s11"
+ },
+ "太阳": {
+  "w": 58,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ },
+ "雨云": {
+  "w": 52,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ },
+ "闪电": {
+  "w": 36,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ },
+ "雪花": {
+  "w": 52,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ },
+ "小树": {
+  "w": 47,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ },
+ "花": {
+  "w": 42,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ },
+ "月亮": {
+  "w": 58,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ },
+ "火焰": {
+  "w": 46,
+  "h": 58,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ },
+ "石头": {
+  "w": 58,
+  "h": 50,
+  "source": "LibTV Lib Image 2.5 Pro · 2026-11-05 · s12"
+ }
+}
