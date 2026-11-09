@@ -19,6 +19,7 @@ film.py 里写 VOICE = 'libtv'，build_pixel 就只读这个缓存；缺哪句�
   python3 libtv_voice.py plan   <集目录>
   python3 libtv_voice.py fetch  <集目录> <句id>=<音频url> [<句id>=<音频url> ...]
   python3 libtv_voice.py status <集目录>
+  python3 libtv_voice.py direct <集目录> [<句id> ...]   # 只在用户明确要求「豆包直连」时用：同模型、同样本、同提示词直连豆包语音接口（用户规定配音走 LibTV）
 
 fetch 需要：uv run --with numpy --with faster-whisper --with opencc-python-reimplemented --with pypinyin [--with sherpa-onnx] python …
 （sherpa-onnx 用来量声纹，没有就跳过这一项）
@@ -122,14 +123,21 @@ def paced(build, e, mp3, words, tempo=1.0, max_gap=None):
     return out, ws
 
 
-def for_build(ep, build, tempo=1.0, max_gap=None):
-    """build_pixel 用：按 LINES 顺序返回 [(mp3, words, dur)]，以及缺的句子 id。"""
+def for_build(ep, build, tempo=1.0, max_gap=None, min_rate=None):
+    """build_pixel 用：按 LINES 顺序返回 [(mp3, words, dur)]，以及缺的句子 id。
+    min_rate（film.py 的 VOICE_MIN_RATE，每秒几个字）：整集加速后还慢于它的句子再单独加速，最多再快 1.25 倍。
+    2026-11-08 第 29 期：大宝「懒洋洋」的语气每秒只念 2.9–3.5 个字，整集拖到 102 秒。"""
     out, missing = [], []
     for e in entries(ep):
         got = cached(ep, build, e)
         if not got: missing.append(e['id']); out.append((None, [], len(e['text']) / 4.5)); continue
         mp3, words, dur, heard = got
-        mp3, words = paced(build, e, mp3, words, tempo, max_gap); dur = SV.probe(mp3)
+        raw_mp3, raw_words = mp3, words
+        mp3, words = paced(build, e, raw_mp3, raw_words, tempo, max_gap); dur = SV.probe(mp3)
+        n = len(re.sub(r'[^\w]', '', e['text']))
+        if min_rate and n / dur < min_rate:
+            t2 = round(tempo * min(1.25, min_rate * dur / n), 2)
+            mp3, words = paced(build, e, raw_mp3, raw_words, t2, max_gap); dur = SV.probe(mp3)
         if heard: print(f'🟡 {e["id"]} 念出来和稿子不一样：「{heard}」')
         print(f'  {e["id"]:<8} {dur:5.2f}s {e["who"]}：{e["text"][:26]}')
         out.append((mp3, words, dur))
@@ -155,7 +163,7 @@ def _num_cn(m):
     return ('百分之' if pct else '') + n
 
 
-SAME = str.maketrans({'愈': '越'})          # whisper 常把「越……越」写成「愈……愈」：意思一样，按同一个字比
+SAME = str.maketrans({'愈': '越', '似': '是', '两': '二', 'A': '诶', 'a': '诶', 'B': '比', 'b': '比', '必': '比', '币': '比'})          # whisper 常把「越……越」写成「愈……愈」：意思一样，按同一个字比
 
 
 def say_key(s):
@@ -240,6 +248,28 @@ def cmd_plan(ep):
         print(f'\n[{e["id"]}] {e["who"]}  参考 {e["node"]}  idem={e["idem"]}  params={json.dumps(e["params"], ensure_ascii=False)}\n{e["prompt"]}')
 
 
+def check_take(build, e, raw, src):
+    """核一条刚生成的原始音频（raw）：whisper 核字、剪句尾多说的、查截断、量声纹，写进缓存。返回问题列表（空＝通过）。"""
+    lid = e['id']; _, mp3, js = files(build, e['key'])
+    got, words = transcribe(raw)
+    cut_at = tail_extra(words, e['text'])
+    if cut_at:                                     # 念完稿子又接着说了一截（参考样本里的话漏出来）：按逐字时间剪掉
+        tmp = raw.with_suffix('.cut.mp3')
+        subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(raw), '-t', f'{cut_at:.3f}', '-c:a', 'libmp3lame', '-q:a', '2', str(tmp)], check=True)
+        tmp.replace(raw); got, words = transcribe(raw)
+        print(f'   ✂ {lid}：句尾多说的部分剪掉了（{cut_at:.2f}s 之后）')
+    heard = None if say_key(got) == say_key(e['text']) else got
+    cut = SV.truncated(raw)
+    fitted = SV.fit(raw, mp3, words)
+    sim = speaker_sim(e['sample'], raw) if e.get('sample') else None
+    js.write_text(json.dumps({'words': fitted, 'raw_words': words, 'heard': heard, 'tone': e['tone'], 'fit': SV.FIT_V,
+                              'raw_cut': cut, 'spk': sim, 'url': src, 'prompt': e['prompt']}, ensure_ascii=False))
+    flags = (['念错：「' + heard + '」'] if heard else []) + (['最后一个字被截断'] if cut else []) + \
+            ([f'声纹 {sim}（低于 {SPK_MIN}，不太像）'] if sim is not None and sim < SPK_MIN else [])
+    print(f'{"🟡" if flags else "✅"} {lid:<8} {SV.probe(mp3):5.2f}s 声纹 {sim}  {e["who"]}：{e["text"][:24]}' + ('  ← ' + '；'.join(flags) if flags else ''))
+    return flags
+
+
 def cmd_fetch(ep, pairs):
     ep = Path(ep).resolve(); build = ep / 'build'
     if not plan_file(ep).exists(): cmd_plan(ep)
@@ -248,26 +278,37 @@ def cmd_fetch(ep, pairs):
     for pair in pairs:
         lid, url = pair.split('=', 1)
         if lid not in es: sys.exit(f'配音单里没有 {lid}（film.py 改过就先重跑 plan）')
-        e = es[lid]; raw, mp3, js = files(build, e['key'])
+        e = es[lid]; raw = files(build, e['key'])[0]
         urllib.request.urlretrieve(url, raw)
-        got, words = transcribe(raw)
-        cut_at = tail_extra(words, e['text'])
-        if cut_at:                                     # 念完稿子又接着说了一截（参考样本里的话漏出来）：按逐字时间剪掉
-            tmp = raw.with_suffix('.cut.mp3')
-            subprocess.run(['ffmpeg', '-v', 'error', '-y', '-i', str(raw), '-t', f'{cut_at:.3f}', '-c:a', 'libmp3lame', '-q:a', '2', str(tmp)], check=True)
-            tmp.replace(raw); got, words = transcribe(raw)
-            print(f'   ✂ {lid}：句尾多说的部分剪掉了（{cut_at:.2f}s 之后）')
-        heard = None if say_key(got) == say_key(e['text']) else got
-        cut = SV.truncated(raw)
-        fitted = SV.fit(raw, mp3, words)
-        sim = speaker_sim(e['sample'], raw) if e.get('sample') else None
-        js.write_text(json.dumps({'words': fitted, 'raw_words': words, 'heard': heard, 'tone': e['tone'], 'fit': SV.FIT_V,
-                                  'raw_cut': cut, 'spk': sim, 'url': url, 'prompt': e['prompt']}, ensure_ascii=False))
-        flags = (['念错：「' + heard + '」'] if heard else []) + (['最后一个字被截断'] if cut else []) + \
-                ([f'声纹 {sim}（低于 {SPK_MIN}，不太像）'] if sim is not None and sim < SPK_MIN else [])
-        print(f'{"🟡" if flags else "✅"} {lid:<8} {SV.probe(mp3):5.2f}s 声纹 {sim}  {e["who"]}：{e["text"][:24]}' + ('  ← ' + '；'.join(flags) if flags else ''))
-        if flags: bad.append(lid)
+        if check_take(build, e, raw, url): bad.append(lid)
     if bad: print(f'\n要重新生成：{", ".join(bad)}（create_node 换一个 idempotencyKey，例如在 idem 后面加 -2；生成后再 fetch）')
+
+
+def cmd_direct(ep, ids):
+    """只在用户明确要求时用（用户规定配音一律走 LibTV）：同一个模型（seed-audio-1.0）、同一份声音样本、同一套 V1 提示词，直接调豆包语音接口。
+    样本作为参考音频（@音频1）上传，提示词里的 {{Node …}} 换成 @音频1。不带句 id：只生成还没配的句子；带句 id：重新生成这几句
+    （旧的那一版留成 libtv_<key>.take<N>.mp3，听过再挑）。要 ~/.config/cat-social-psych/keys.env 里的 DOUBAO_SPEECH_API_KEY。"""
+    ep = Path(ep).resolve(); build = ep / 'build'; (build / 'tts').mkdir(parents=True, exist_ok=True)
+    es = entries(ep); plan_file(ep).write_text(json.dumps(es, ensure_ascii=False, indent=1))
+    want = set(ids); unknown = want - {e['id'] for e in es}
+    if unknown: sys.exit(f'film.py 里没有这些句子：{", ".join(sorted(unknown))}')
+    bad = []
+    for e in es:
+        raw, mp3, js = files(build, e['key'])
+        if want and e['id'] not in want: continue
+        if not want and mp3.exists(): continue
+        if raw.exists():                                # 重做：旧的一版留着
+            n = 1
+            while raw.with_name(f'libtv_{e["key"]}.take{n}.mp3').exists(): n += 1
+            raw.replace(raw.with_name(f'libtv_{e["key"]}.take{n}.mp3'))
+        prompt = re.sub(r'\{\{Node [^}]+\}\}', '@音频1', e['prompt'])
+        try:
+            audio, _, _ = SV.create(prompt, ref=e['sample'])
+        except SV.SeedError as err:
+            print(f'🔴 {e["id"]}：{err}'); bad.append(e['id']); continue
+        raw.write_bytes(audio)
+        if check_take(build, e, raw, 'doubao-direct'): bad.append(e['id'])
+    if bad: print(f'\n要重新生成：{" ".join(bad)}（再跑一次 direct <集目录> {" ".join(bad)}）')
 
 
 def cmd_status(ep):
@@ -281,8 +322,9 @@ def cmd_status(ep):
 
 
 if __name__ == '__main__':
-    if len(sys.argv) < 3 or sys.argv[1] not in ('plan', 'fetch', 'status'): sys.exit(__doc__)
+    if len(sys.argv) < 3 or sys.argv[1] not in ('plan', 'fetch', 'status', 'direct'): sys.exit(__doc__)
     cmd, ep = sys.argv[1], sys.argv[2]
     if cmd == 'plan': cmd_plan(ep)
     elif cmd == 'fetch': cmd_fetch(ep, sys.argv[3:])
+    elif cmd == 'direct': cmd_direct(ep, sys.argv[3:])
     else: cmd_status(ep)

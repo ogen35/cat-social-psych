@@ -128,9 +128,10 @@ def clip_speech(name):
     return _json.loads(f.read_text()).get('speech', []) if f.exists() else []
 
 
-def clip(fr, name, t, t0, offset=None, rate=1.0, run=0, lead=0.03):
+def clip(fr, name, t, t0, offset=None, rate=1.0, run=0, lead=0.03, zoom=0.0, fy=0.5):
     """播放片段（build/clips/<name>/%04d.jpg，30fps）：镜头从 t0 开始。
-    offset＝从片段的第几秒播起；不写就自动对口型：片段里第 run 段说话的开头，对准 t0（台词出声的时刻）。"""
+    offset＝从片段的第几秒播起；不写就自动对口型：片段里第 run 段说话的开头，对准 t0（台词出声的时刻）。
+    zoom＝放大多少（0.3＝放大 1.3 倍），fy＝放大后往哪边对齐（1.0＝底边对齐，猫整体上移）：猫坐得太低、头压字幕时用。"""
     if offset is None:
         sp = clip_speech(name)
         offset = max(0.0, sp[min(run, len(sp) - 1)][0] - lead) if sp else 0.0
@@ -141,14 +142,19 @@ def clip(fr, name, t, t0, offset=None, rate=1.0, run=0, lead=0.03):
     p = str(d / f'{i:04d}.jpg')
     img = _skimg_file(p)[0]
     _SPR.pop(p, None)                                   # 视频帧不缓存
-    fr.draw(lambda cv: cv.drawImageRect(img, skia.Rect.MakeWH(W, H), LIN))
+    dst = skia.Rect.MakeXYWH(-W * zoom / 2, -H * zoom * fy, W * (1 + zoom), H * (1 + zoom)) if zoom else skia.Rect.MakeWH(W, H)
+    fr.draw(lambda cv: cv.drawImageRect(img, dst, LIN))
 
 
-def clip_sync(fr, name, t, anchors, tail_rate=1.0):
+def clip_sync(fr, name, t, anchors, tail_rate=1.0, zoom=0.0, fy=0.5):
     """一段片段里有好几句台词时用：anchors＝[(台词出声时刻, 片段里第几段说话), …]。
-    在锚点之间按比例微调播放速度，让每句台词的出声都对上片段里的张嘴，画面连续不跳。"""
+    在锚点之间按比例微调播放速度，让每句台词的出声都对上片段里的张嘴，画面连续不跳。
+    第二项写成小数（如 0.0、2.1）＝直接指定片段里的秒数：旁白先念、后面才轮到角色开口的镜头，用它把片段开头钉住。"""
     sp = clip_speech(name)
-    pts = [(ta, sp[min(r, len(sp) - 1)][0] - 0.03) for ta, r in anchors] if sp else [(anchors[0][0], 0.0)]
+    def at(r):
+        if isinstance(r, float): return r
+        return sp[min(r, len(sp) - 1)][0] - 0.03 if sp else 0.0
+    pts = [(ta, at(r)) for ta, r in anchors]
     t0, c0 = pts[0]
     if t <= t0: ct = max(0.0, c0 - (t0 - t))
     else:
@@ -156,7 +162,7 @@ def clip_sync(fr, name, t, anchors, tail_rate=1.0):
         for (ta, ca), (tb, cb) in zip(pts, pts[1:]):
             if ta <= t < tb: ct = ca + (t - ta) * (cb - ca) / max(1e-3, tb - ta); break
         if ct is None: ct = pts[-1][1] + (t - pts[-1][0]) * tail_rate
-    clip(fr, name, ct, 0.0, offset=0.0)
+    clip(fr, name, ct, 0.0, offset=0.0, zoom=zoom, fy=fy)
 
 
 def clip_len(name):

@@ -26,5 +26,29 @@
   "file": "道具/问答卡_v2.png",
   "desc": "fan of plain white quiz cards with thin hot-pink borders",
   "version": "v2（停用）"
+ },
+ "答题舞台": {
+  "kind": "scene",
+  "version": "v3",
+  "node": "i-qv9Gc19xvd",
+  "file": "场景/答题舞台_v3.png",
+  "desc": "small quiz-show stage in naive gouache: blue backdrop with yellow stars and light bulbs, a pink host podium, a golden microphone on a tall stand, a round yellow contestant stool, a pink stage floor",
+  "note": "第 28 期 验证性偏差"
+ },
+ "楼道": {
+  "kind": "scene",
+  "version": "v3",
+  "node": "i-uvN6rg6VSG",
+  "file": "场景/楼道_v3.png",
+  "desc": "apartment stairwell landing in gouache: orange walls, a dark-green door and a cream door with a yellow delivery helmet hanging beside it, a stack of moving boxes with a toy robot and a model plane, a tiled floor",
+  "note": "第 29 期 代表性启发：搬家纸箱和外卖头盔是剧情线索"
+ },
+ "候机厅": {
+  "kind": "scene",
+  "version": "v3",
+  "node": "i-rNCV5eeJe9",
+  "file": "场景/候机厅_v3.png",
+  "desc": "airport departure lounge in flat gouache: a huge window with a white airplane under a mint-green sky, coral-pink waiting seats, a potted palm, a coral suitcase, a teal carpet floor",
+  "note": "第 30 期 易得性启发"
  }
 }

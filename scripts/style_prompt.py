@@ -9,6 +9,7 @@
 参考图是别人的作品：提示词里只写风格的文字描述，不写作者名字。
 """
 import argparse
+import sys
 
 STYLE = ('Naive contemporary art illustration, hand-painted gouache with visible brushstrokes and a subtle colored-pencil texture, '
          'bold flat saturated color blocks in {main} and {accent} with black, white and a touch of red, '
@@ -52,4 +53,7 @@ if __name__ == '__main__':
     ap.add_argument('kind', choices=list(LAYOUT)); ap.add_argument('subject')
     ap.add_argument('--palette', choices=list(PALETTE)); ap.add_argument('--extra', default='')
     a = ap.parse_args()
-    print(build(a.kind, a.subject, a.palette, a.extra))
+    out = build(a.kind, a.subject, a.palette, a.extra)
+    if len(out) > 1024:                       # Style Image V8.2（mj-v8.2）：提示词超过 1024 字会直接失败（2026-11-08 实测）
+        sys.exit(f'提示词 {len(out)} 字，超过 Style Image V8.2 的上限 1024：把主体描述写短 {len(out) - 1024} 字以上')
+    print(out)

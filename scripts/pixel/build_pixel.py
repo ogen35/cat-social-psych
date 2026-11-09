@@ -228,11 +228,13 @@ def check(film, cast_names):
         if cv.get('who') and cv['who'] not in cast_names: E.append(f"封面的 who「{cv['who']}」不在角色库")
     elif callable(cv) and not getattr(film, 'FLAT', False): Wn.append("META['cover'] 还是函数：改成爆款封面模板 dict(line1=, line2=, hi=, who=, expr=, bg=, tag=)，见 references/抖音发布.md")
     if not isinstance(getattr(film, 'META', {}).get('cover'), dict) and not getattr(film, 'META', {}).get('cover_h'): Wn.append("META 里没有 cover_h（抖音横封面 4:3）：会用竖封面自动拼一张，最好单独画")
-    if fast(film): est = sum(len(re.sub(r'[【】，。！？：；、…—]', '', d['say'])) / 5.2 + d.get('gap', getattr(film, 'GAP', 0.12)) for d in film.LINES) + getattr(film, 'TAIL', 1)
+    # Seed Audio 原速每秒约 3.5 字（第 29 期实测 416 字、tempo 1.25 念了 94.8 秒），按 VOICE_TEMPO 折算；其他配音按每秒 5.2 字
+    rate = 3.5 * getattr(film, 'VOICE_TEMPO', 1.0) if getattr(film, 'VOICE', '') == 'libtv' else 5.2
+    if fast(film): est = sum(len(re.sub(r'[【】，。！？：；、…—]', '', d['say'])) / rate + d.get('gap', getattr(film, 'GAP', 0.12)) for d in film.LINES) + getattr(film, 'TAIL', 1)
     else: est = sum(len(re.sub(r'[【】]', '', d['say'])) / 4.5 + d.get('gap', 0.28) for d in film.LINES) + 2
     if fast(film):
-        lim = 100 if getattr(film, 'FORMAT', '') == '问题链' else 62 if getattr(film, 'FLAT', False) else 50   # 问题链 3–4 层约 70–90 秒
-        if est > lim: Wn.append(f'快节奏：估计 {est:.0f} 秒，{"问题链压到 90 秒左右" if lim == 100 else "平涂实验格式压到 60 秒内" if lim > 50 else "完播优先要压到 30–45 秒"}')
+        lim = 92 if getattr(film, 'FORMAT', '') == '问题链' else 62 if getattr(film, 'FLAT', False) else 50   # 问题链 3–4 层约 70–90 秒（估时已按 Seed Audio 实际语速校准）
+        if est > lim: Wn.append(f'快节奏：估计 {est:.0f} 秒，{"问题链压到 90 秒左右（全片约 380 字）" if lim == 92 else "平涂实验格式压到 60 秒内" if lim > 50 else "完播优先要压到 30–45 秒"}')
         shot = est / max(1, len(film.SCENES))
         if shot > (5.5 if getattr(film, 'FLAT', False) else 3.5): Wn.append(f'快节奏：平均 {shot:.1f} 秒才换一个镜头，抖音要 1.5–3 秒一换：多拆几个镜头')
     elif est > 118: Wn.append(f'估计 {est:.0f} 秒，可能超过 120 秒')
@@ -247,7 +249,8 @@ def load_film(path):
 def voice_lines(film, base, build, no_voice):
     if getattr(film, 'VOICE', '') == 'libtv' and not no_voice:     # LibTV Seed Audio：只读 libtv_voice.py fetch 写好的缓存
         import libtv_voice
-        out, missing = libtv_voice.for_build(base, build, getattr(film, 'VOICE_TEMPO', 1.0), getattr(film, 'VOICE_MAX_GAP', None))
+        out, missing = libtv_voice.for_build(base, build, getattr(film, 'VOICE_TEMPO', 1.0), getattr(film, 'VOICE_MAX_GAP', None),
+                                             getattr(film, 'VOICE_MIN_RATE', None))
         if missing:
             sys.exit(f'🔴 还有 {len(missing)} 句没配音：{", ".join(missing)}\n'
                      f'   先跑 python3 $S/scripts/libtv_voice.py plan {base}，用 LibTV 生成后 fetch 进缓存（见 references/平涂画风.md 第 5 节）')
@@ -344,9 +347,10 @@ def main():
             for p0, p1 in punches:
                 if p0 <= t < p1: fr.zoom = (1 + 0.1 * kit.eout((t - p0) / 0.15), kit.W / 2, 220); break
         for w0, title in wipes: fr.wipe(t, w0, title)
-        if getattr(film, 'TOPBAR', ''): kit.draw_topbar(fr, film.TOPBAR)
+        overlay = getattr(film, 'OVERLAY', True)                       # Vox 版：顶部标题、字幕、名牌由片段自己画（vox_shots.py），这里不再叠
+        if overlay and getattr(film, 'TOPBAR', ''): kit.draw_topbar(fr, film.TOPBAR)
         shown = None
-        for c0, c1, txt, hi, who in caps:
+        for c0, c1, txt, hi, who in (caps if overlay else []):
             if any(a <= t < b for a, b in nocap): break
             if c0 <= t < c1: kit.draw_caption(fr, txt, hi, who, cap_size); shown = txt; break
         if shown and qa is not None:                                    # 自检：字幕（含名牌）压在猫身上

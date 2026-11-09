@@ -31,7 +31,7 @@ H3_STYLE = ('Naive contemporary art illustration matching the references: hand-p
             'paws stay on the ground, the cats act with heads, ears, eyes and tails, and props stand on their own.')
 # ↑ 2026-11-07 第 27b 期实测：只要写猫用前爪做动作（握话筒、拍胸口、挥爪、捂嘴、搭爪子），H3 就会保留着地的两只前爪、
 #   再多画一只（三只前爪），或者画成带手指的人手。所以镜头单里一律不写前爪动作，道具放支架上、桌上。
-H3_SAFE = 'Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.'
+H3_SAFE = 'One continuous take with no cuts. Vertical frame; every cat stays in the upper three quarters, the lower quarter is plain floor.'
 SCENE_LIB = SKILL / 'assets' / '平涂' / '场景库.json'      # {名字: {node, desc, kind: scene|prop}}
 KEEP = ('成片.mp4', '封面_竖屏_3x4.png', '封面_横屏_4x3.png', '抖音文案.txt')
 LIMIT = 2000                                          # LibTV 的提示词上限
@@ -71,7 +71,8 @@ def h3_prompt(s, spec):
     if not talks and s.get('after'): talk = ' ' + lab(s['after'])
     allsub = ', '.join(labels.values())
     summary = lab(s.get('summary') or f'One shot in {{scene}} with {", ".join("{" + c + "}" for c in s["cast"])}.')
-    safe = H3_SAFE if s.get('safe', True) else 'Vertical frame.'
+    safe = H3_SAFE if s.get('safe', True) else 'One continuous take with no cuts. Vertical frame.'
+    # ↑ 2026-11-08 第 28 期：H3 常在一个片段里先给远景再硬切近景，甚至切到别的背景；写明一镜到底能减少。
     p = (f'subject_definitions:\n' + '\n'.join(defs) + '\n\n'
          f'summary:\n[reference generation] {summary}\n\n'
          f'retention_analysis:\n{allsub} ([Shot 1]): fully_preserved - designs, colors, painting style.\n\n'
